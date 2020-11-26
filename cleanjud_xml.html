@@ -1,0 +1,252 @@
+<!-- ---------------------------------------------------------------------------- -->
+<!--  CNJ Inova -  HACKATHON - Desafio 2 - #Saneamento de Dados                   -->
+<!-- ---------------------------------------------------------------------------- -->
+<!--  SOLUCAO:  CleaNJud - Decisoes mais Eficazes com a Qualidade do DATAJUD      -->
+<!-- ---------------------------------------------------------------------------- -->
+<!--  Purpose:  www.cleanjud.com.br                                               -->
+<!-- ---------------------------------------------------------------------------- -->
+<!--  AUTORES:  (GRUPO 11 - desafio 2)                                            -->
+<!--                                                                              -->
+<!--            Jamila Fonseca - ADV - (jamila.fonseca@hotmail.com)               -->
+<!--                             www.linkedin.com/in/jamila-fonseca-41b07a19a     -->
+<!--            Luis Assuncao  - TI  - (lcpassuncao@gmail.com)                    -->
+<!--            Luciana Weiler - UX  - (luciana.weiler.2020@gmail.com)            -->
+<!-- ---------------------------------------------------------------------------- -->
+<!-- VERSAO:    Novembro - 2020                                                   -->
+<!-- ---------------------------------------------------------------------------- -->
+
+<html>
+<head>
+
+<!-- ------------------------------------------------------  -->
+<!--    Metadados                                            -->
+<!-- ------------------------------------------------------  -->
+
+<meta NAME="title" CONTENT="CleaNJud">
+<meta NAME="keywords" CONTENT="CLEANJUD,CNJ,CNJinova,saneamento,datajud,higienizacao,machine learning,inteligencia artificial">
+<meta NAME="description" CONTENT="CLEANJUD - Gestão de Metadados e Saneamento do DATAJUD">
+<meta NAME="author" CONTENT="Jamila Fonseca, Luis Assuncao, Luciana Weiler">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>CLEANJUD - Saneamento do DATAJUD</title>
+
+<!-- ------------------------------------------------------  -->
+<!--   CSS - STYLES SHEETS                                   -->
+<!-- ------------------------------------------------------  -->
+
+<link rel="stylesheet" href="css/cleanjud_menu.css">
+<!-- CSS do COMBO BOX -->
+<link rel="stylesheet" href="css/pure-css-select-style.css">
+<!-- CSS do MENU foi utilizado biblioteca externa -->
+<link rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="css/w3.css">
+
+<!-- ------------------------------------------------------  -->
+<!--   JS - JAVASCRIPTS                                      -->
+<!-- ------------------------------------------------------  -->
+
+
+</head>
+
+<body>
+
+<!-- ------------------------------------------------------  -->
+<!--    Cabecalho e Logomarcas - CLEANJUD                    -->
+<!-- ------------------------------------------------------  -->
+
+<div class="navbar_fixed">
+
+<div class="titulo">
+<img src="images/cleanjud_header.jpg">
+</div>
+
+<!-- ------------------------------------------------------  -->
+<!--    MENU - Navigation Bar                                -->
+<!-- ------------------------------------------------------  -->
+
+
+  <a  href="cleanjud_home.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="cleanjud_sobre.html"><i class="fa fa-fw fa-user"></i> Sobre</a>
+  <a href="cleanjud_gestao_metadado.html"><i class="fa fa-fw fa-legal"></i> Gestão</a>
+  <a href="cleanjud_mapa.html"><i class="fa fa-fw fa-globe"></i> Mapa</a>
+  <a href="cleanjud_correcao_automatica.html"><i class="fa fa-fw fa-check"></i> Correção Automática</a> 
+  <a href="cleanjud_correcao_manual.html"><i class="fa fa-fw fa-copy"></i> Correção Manual</a> 
+  <a href="cleanjud_controle.html"><i class="fa fa-fw fa-dashboard"></i> Controle</a>
+  <a class="active" href="cleanjud_xml.html"><i class="fa fa-fw fa-save"></i> XML Valid</a> 
+  <a href="cleanjud_docs.html"><i class="fa fa-fw fa-question-circle"></i> DOC</a> 
+</div>
+
+<!-- ------------------------------------------------------  -->
+<!--    Corpo da Pagina                                      -->
+<!-- ------------------------------------------------------  -->
+
+<br>
+
+
+
+
+<!-- Menu Lateral -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:20%">
+  <h3 class="w3-bar-item">XML VALID:</h3>
+  <a href="#C1"   class="w3-bar-item w3-button">01) Sobre o Sistema</a>
+  <a href="#C2"   class="w3-bar-item w3-button">02) Compatibilidade</a>
+  <a href="#C3" class="w3-bar-item w3-button">03) DOWNLOAD</a>
+  <a href="#C4" class="w3-bar-item w3-button">04) Instalação</a>
+  <a href="#C5" class="w3-bar-item w3-button">05) Instrução de Uso</a>
+  <a href="#C6" class="w3-bar-item w3-button">06) Arquivos de Saída</a>
+ 
+</div>
+
+<!-- Page Content -->
+<div style="margin-left:20%">
+
+
+
+<div class="w3-container">
+<div  id="C1"></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<h1><b>01) Sobre o Sistema XML VALID</b></h2>
+
+<table>
+<tr>
+<td><img src="images\xml_valid_grande.jpg"></td>
+<td>
+
+
+<br>
+O sistema tem o objetivo de validar o preenchimento e a 
+consistência das informações do arquivo XML (Metadados dos Processos Jurídicos),<br>
+<b>ANTES</b> antes do envio das informações ao CNJ DATAJUD.
+<br>
+<div  id="C2"></div>
+<br>
+O XML Valid faz a identificação dos problemas, gerando um relatório automático das inconsistências
+e corrigindo, na medida do possível, as informações faltantes ou inconsistentes.
+</td>
+</tr>
+</table>
+<br>
+
+<h1 id="C3"><b>02) Compatibilidade</b></h2>
+
+Compatível com o Sistema Operacional Windows Desktop 7+ (ou posterior)<br>
+ou Windows Server.<br>
+<br>
+<br>
+
+<h1><b>03) Download do Sistema:</b></h2>
+<br>
+<table>
+<tr>
+<td><a href="xml_valid\cleanjud_xml_valid.zip"><img src="images\xml_valid_download.png"></a></td>
+<td>
+O sistema é instalado na máquina (ou servidor) local do Tribunal, <br>
+de onde está armazenado o arquivo XML original.<br><br>
+
+A instalação é simples. É apenas um (1) executável.<br><br>
+
+<< Clique no botão ao lado para iniciar o Download.<br>
+
+</td>
+</tr>
+</table>
+<div  id="C4"></div>
+<br>
+<br>
+
+
+
+<h1><b>04) Instalação</b></h2>
+<br>
+Após o download, para instalar, basta descompactar o arquivo ZIP na pasta destino.
+<br>
+<div  id="C5"></div>
+<br>
+<img src="images\xml_valid_arquivos.jpg" width="800px">
+<br>
+<br>
+
+<h1><b>05) Instrução de Uso</b></h2>
+
+<br>
+Para executar o programa:<br>
+<br>
+1) Entre no Modo de Linha de Comando  (MS PROMPT) <br>
+<br>
+2) Digite o nome do programa e o nome do arquivo a ser analisado, conforme abaixo:<br>
+<br><br>
+<table><tr><td width="500px" style="background-color:black;color:#6DFF79;font-family:courier"><br><br><b> >> cleandjud_xml_valid.exe  exemplo.xml </b><br><br></td></tr></table>
+
+<br>
+<br>
+<img src="images\xml_valid_execucao.jpg"   width="800px">
+<br>
+<br>
+<div  id="C6"></div>
+<br>
+<br><br>
+
+<h1><b>06) Arquivos de Saída</b></h2>
+
+<br>
+Após a execução do programa, existirão 2 arquivos de saída:<br>
+<br>
+1) <b>"nome_arquivo_corrigido.xml"</b>  :  <br>
+São as mesmas informações e a mesma estrutura no formato XML,<br> 
+com os dados que foram passíveis de correção automatizada.
+<br><br>
+<br>
+
+<br>
+ARQUIVO ORIGINAL XML:<br>
+<img src="images\xml_valid_antes.jpg"  width="800px">
+<br>
+<br>
+<br>
+
+<br>
+ARQUIVO CORRIGIDO XML:<br>
+<img src="images\xml_valid_depois.jpg"   width="800px">
+<br>
+<br>
+<br>
+<br>
+2) <b>"nome_arquivo_relatorio.xlsx"</b> <br> 
+  Relatório de verificação de inconsistências e campos que foram corrigidos, em formato EXCEL.<br>
+<br>
+<br>
+<img src="images\xml_valid_excel.jpg"   width="800px">
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+
+</div>
+
+
+
+<!-- ------------------------------------------------------  -->
+<!--   Final do HTML                                         -->
+<!-- ------------------------------------------------------  -->
+	
+</body>
+</html> 

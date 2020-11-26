@@ -1,0 +1,180 @@
+<!-- ---------------------------------------------------------------------------- -->
+<!--  CNJ Inova -  HACKATHON - Desafio 2 - #Saneamento de Dados                   -->
+<!-- ---------------------------------------------------------------------------- -->
+<!--  SOLUCAO:  CleaNJud - Decisoes mais Eficazes com a Qualidade do DATAJUD      -->
+<!-- ---------------------------------------------------------------------------- -->
+<!--  Purpose:  www.cleanjud.com.br                                               -->
+<!-- ---------------------------------------------------------------------------- -->
+<!--  AUTORES:  (GRUPO 11 - desafio 2)                                            -->
+<!--                                                                              -->
+<!--            Jamila Fonseca - ADV - (jamila.fonseca@hotmail.com)               -->
+<!--                             www.linkedin.com/in/jamila-fonseca-41b07a19a     -->
+<!--            Luis Assuncao  - TI  - (lcpassuncao@gmail.com)                    -->
+<!--            Luciana Weiler - UX  - (luciana.weiler.2020@gmail.com)            -->
+<!-- ---------------------------------------------------------------------------- -->
+<!-- VERSAO:    Novembro - 2020                                                   -->
+<!-- ---------------------------------------------------------------------------- -->
+
+<html>
+<head>
+
+<!-- ------------------------------------------------------  -->
+<!--    Metadados                                            -->
+<!-- ------------------------------------------------------  -->
+
+<meta NAME="title" CONTENT="CleaNJud">
+<meta NAME="keywords" CONTENT="CLEANJUD,CNJ,CNJinova,saneamento,datajud,higienizacao,machine learning,inteligencia artificial">
+<meta NAME="description" CONTENT="CLEANJUD - Gestão de Metadados e Saneamento do DATAJUD">
+<meta NAME="author" CONTENT="Jamila Fonseca, Luis Assuncao, Luciana Weiler">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>CLEANJUD - Saneamento do DATAJUD</title>
+
+<!-- ------------------------------------------------------  -->
+<!--   CSS - STYLES SHEETS                                   -->
+<!-- ------------------------------------------------------  -->
+
+<link rel="stylesheet" href="css/cleanjud_menu.css">
+<link rel="stylesheet" href="css/cleanjud_kpi.css">
+<link rel="stylesheet" href="css/cleanjud_report.css">
+<!-- CSS do COMBO BOX -->
+<link rel="stylesheet" href="css/pure-css-select-style.css">
+<!-- CSS do MENU foi utilizado biblioteca externa -->
+<link rel="stylesheet" href="css/font-awesome.css">
+
+
+<!-- ------------------------------------------------------  -->
+<!--   JS - JAVASCRIPTS                                      -->
+<!-- ------------------------------------------------------  -->
+
+<script src="js/jquery.js"></script> 
+<script> 
+    $(function(){
+      $("#includedContent1").load("ftp/cleanjud_correcao_manual_movimentacao.html"); 
+    });
+</script> 
+<script> 
+    $(function(){
+      $("#includedContent2").load("ftp/cleanjud_correcao_manual_classe.html"); 
+    });
+</script>
+<script> 
+    $(function(){
+      $("#includedContent3").load("ftp/cleanjud_correcao_manual_assunto.html"); 
+    });
+</script>
+
+</head>
+
+<body>
+
+<!-- ------------------------------------------------------  -->
+<!--    Cabecalho e Logomarcas - CLEANJUD                    -->
+<!-- ------------------------------------------------------  -->
+
+<div class="titulo">
+<img src="images/cleanjud_header.jpg">
+</div>
+
+<!-- ------------------------------------------------------  -->
+<!--    MENU - Navigation Bar                                -->
+<!-- ------------------------------------------------------  -->
+
+<div class="navbar">
+  <a href="cleanjud_home.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="cleanjud_sobre.html"><i class="fa fa-fw fa-user"></i> Sobre</a>
+  <a href="cleanjud_gestao_metadado.html"><i class="fa fa-fw fa-legal"></i> Gestão</a>
+  <a href="cleanjud_mapa.html"><i class="fa fa-fw fa-globe"></i> Mapa</a>  
+  <a href="cleanjud_correcao_automatica.html"><i class="fa fa-fw fa-check"></i> Correção Automática</a> 
+  <a class="active"   href="cleanjud_correcao_manual.html"><i class="fa fa-fw fa-copy"></i> Correção Manual</a> 
+  <a href="cleanjud_controle.html"><i class="fa fa-fw fa-dashboard"></i> Controle</a>
+  <a href="cleanjud_xml.html"><i class="fa fa-fw fa-save"></i> XML Valid</a> 
+  <a href="cleanjud_docs.html"><i class="fa fa-fw fa-question-circle"></i> DOC</a> 
+</div>
+
+<!-- ------------------------------------------------------  -->
+<!--    Corpo da Pagina                                      -->
+<!-- ------------------------------------------------------  -->
+
+<br>
+<br><br>
+
+<table>
+<tr>
+<td>
+<img src="images/correcao_movimentacao.jpg">
+</td>
+<td>&nbsp;&nbsp;</td>
+<td>
+<b>Correção Manual - Informação:  MOVIMENTAÇÃO  (Ciclo Processual).</b><br>
+Processos com inconsistências identificadas nos dados de Movimentação:<br>
+(Sem nenhuma movimentação e/ou sem movimentação há mais de 1 ano e/ou códigos inválidos).<br>
+Abaixo o gráfico com o Ranking de Inconsistências (de movimentação) por Tribunal.<br>
+No botão de "Download" é possível visualizar a planilha com os números dos processos nessa situação.<br>
+As informações dos mesmos precisarão ser reenviados pelo procedimento normal (envio do XML ao DataJud).
+</td>
+</tr>
+</table>
+
+
+<br><br>
+
+<div id="includedContent1"></div>
+
+<br>
+<br><br>
+
+<table>
+<tr>
+<td>
+<img src="images/correcao_classe.jpg">
+</td>
+<td>&nbsp;&nbsp;</td>
+<td>
+<b>Correção Manual - Informação:  CLASSE PROCESSUAL<b><br>
+Processos com inconsistências identificadas nos dados de COD CLASSE:<br>
+(Cod Classe não está consistente com o Ramo/Grau da Justiça).<br>
+Abaixo o gráfico com o Ranking de Inconsistências (de Assunto) por Tribunal.<br>
+No botão de "Download" é possível visualizar a planilha com os números dos processos nessa situação.<br>
+As informações dos mesmos precisarão ser reenviados pelo procedimento normal (envio do XML ao DataJud).
+</td>
+</tr>
+</table>
+
+
+<br><br>
+
+<div id="includedContent2"></div>
+
+<br>
+<br><br>
+
+<table>
+<tr>
+<td>
+<img src="images/correcao_assunto.jpg">
+</td>
+<td>&nbsp;&nbsp;</td>
+<td>
+<b>Correção Manual - Informação:  ASSUNTO (COD ASSUNTO NACIONAL)<b><br>
+Processos com inconsistências identificadas nos dados de ASSUNTO:<br>
+(Cod Assunto não está consistente com o Ramo/Grau da Justiça).<br>
+Abaixo o gráfico com o Ranking de Inconsistências (de Assunto) por Tribunal.<br>
+No botão de "Download" é possível visualizar a planilha com os números dos processos nessa situação.<br>
+As informações dos mesmos precisarão ser reenviados pelo procedimento normal (envio do XML ao DataJud).
+</td>
+</tr>
+</table>
+
+
+<br><br>
+
+<div id="includedContent3"></div>
+
+<!-- ------------------------------------------------------  -->
+<!--   Final do HTML                                         -->
+<!-- ------------------------------------------------------  -->
+	
+</body>
+</html> 

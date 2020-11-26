@@ -1,0 +1,244 @@
+<!-- ---------------------------------------------------------------------------- -->
+<!--  CNJ Inova -  HACKATHON - Desafio 2 - #Saneamento de Dados                   -->
+<!-- ---------------------------------------------------------------------------- -->
+<!--  SOLUCAO:  CleaNJud - Decisoes mais Eficazes com a Qualidade do DATAJUD      -->
+<!-- ---------------------------------------------------------------------------- -->
+<!--  Purpose:  www.cleanjud.com.br                                               -->
+<!-- ---------------------------------------------------------------------------- -->
+<!--  AUTORES:  (GRUPO 11 - desafio 2)                                            -->
+<!--                                                                              -->
+<!--            Jamila Fonseca - ADV - (jamila.fonseca@hotmail.com)               -->
+<!--                             www.linkedin.com/in/jamila-fonseca-41b07a19a     -->
+<!--            Luis Assuncao  - TI  - (lcpassuncao@gmail.com)                    -->
+<!--            Luciana Weiler - UX  - (luciana.weiler.2020@gmail.com)            -->
+<!-- ---------------------------------------------------------------------------- -->
+<!-- VERSAO:    Novembro - 2020                                                   -->
+<!-- ---------------------------------------------------------------------------- -->
+
+<html>
+<head>
+
+<!-- ------------------------------------------------------  -->
+<!--    Metadados                                            -->
+<!-- ------------------------------------------------------  -->
+
+<meta NAME="title" CONTENT="CleaNJud">
+<meta NAME="keywords" CONTENT="CLEANJUD,CNJ,CNJinova,saneamento,datajud,higienizacao,machine learning,inteligencia artificial">
+<meta NAME="description" CONTENT="CLEANJUD - Gestão de Metadados e Saneamento do DATAJUD">
+<meta NAME="author" CONTENT="Jamila Fonseca, Luis Assuncao, Luciana Weiler">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>CLEANJUD - Saneamento do DATAJUD</title>
+
+<!-- ------------------------------------------------------  -->
+<!--   CSS - STYLES SHEETS                                   -->
+<!-- ------------------------------------------------------  -->
+
+<link rel="stylesheet" href="css/cleanjud_menu.css">
+<link rel="stylesheet" href="css/cleanjud_kpi.css">
+<link rel="stylesheet" href="css/cleanjud_report.css">
+<!-- CSS do COMBO BOX -->
+<link rel="stylesheet" href="css/pure-css-select-style.css">
+<!-- CSS do MENU foi utilizado biblioteca externa -->
+<link rel="stylesheet" href="css/font-awesome.css">
+
+
+<!-- ------------------------------------------------------  -->
+<!--   JS - JAVASCRIPTS                                      -->
+<!-- ------------------------------------------------------  -->
+
+<script src="js/cleanjud_tribunais.js"></script>
+<script src="ftp/cleanjud_gestao_array_dados.js"></script>
+<script src="ftp/cleanjud_gestao_array_kpi.js"></script>
+<script src="js/jquery.js"></script> 
+    <script> 
+    $(function(){
+      $("#includedContent").load("ftp/cleanjud_controle.html"); 
+    });
+    </script> 
+	
+	
+
+<script type="text/JavaScript">
+
+function jsKPI() {
+
+    var var_index  = document.getElementById("combo_justica").value;
+	
+	document.getElementById("kpi1").innerHTML = arrayDadosKPI[var_index][0];
+	document.getElementById("kpi3").innerHTML = arrayDadosKPI[var_index][2];
+	document.getElementById("kpi6").innerHTML = "0"; 
+	document.getElementById("kpi5").innerHTML = "0"; 
+
+};
+
+function jsGraph() {
+
+    var var_index  = document.getElementById("combo_justica").value;
+		
+	document.getElementById("kpi1").innerHTML = arrayDadosKPI[var_index][0];
+	document.getElementById("kpi3").innerHTML = arrayDadosKPI[var_index][2];
+	document.getElementById("kpi6").innerHTML = "0"; 
+	document.getElementById("kpi5").innerHTML = "0"; 
+	
+	document.getElementById("titulo_rpt").innerHTML = document.getElementById("combo_justica").value;
+	
+    var iMax = 22;
+    var jMax = 4;
+    var image = "";
+     
+    for (i=0; i<iMax; i++) {
+       for (j=0; j<jMax; j++) {
+          lin = i;
+		  
+          col = 0;
+     	  indice = (i+1) + "_1" 
+     	  document.getElementById("val_" + indice).innerHTML = arrayDadosGrafico[var_index][lin][col];
+          document.getElementById("pct_" + indice).innerHTML = arrayDadosGrafico[var_index][lin][col+2];	
+     	  image = document.getElementById("img_" + indice);
+     	  image.style.width = arrayDadosGrafico[var_index][lin][col+1];
+
+		  col = 18;  // Erros
+		  indice = (i+1) + "_2" 
+     	  document.getElementById("val_" + indice).innerHTML = arrayDadosGrafico[var_index][lin][col];
+          document.getElementById("pct_" + indice).innerHTML = arrayDadosGrafico[var_index][lin][col+2];	
+     	  image = document.getElementById("img_" + indice);
+     	  image.style.width = arrayDadosGrafico[var_index][lin][col+1];
+		  
+		  col = 21;  // Reenvios
+		  indice = (i+1) + "_3" 
+     	  document.getElementById("val_" + indice).innerHTML = "0";  
+          document.getElementById("pct_" + indice).innerHTML = "0%";  
+     	  image = document.getElementById("img_" + indice);
+     	  image.style.width = "0px"; 
+		  
+		  col = 24;  // Acertos
+		  indice = (i+1) + "_4" 
+     	  document.getElementById("val_" + indice).innerHTML = "0";   
+          document.getElementById("pct_" + indice).innerHTML = "0%";  	
+     	  image = document.getElementById("img_" + indice);
+     	  image.style.width = "0px"; 
+       }
+     }
+
+	  
+}        
+	
+</script>
+
+	
+</head>
+
+<body>
+
+
+
+<!-- ------------------------------------------------------  -->
+<!--    Cabecalho e Logomarcas - CLEANJUD                    -->
+<!-- ------------------------------------------------------  -->
+
+<div class="titulo">
+<img src="images/cleanjud_header.jpg">
+</div>
+
+<!-- ------------------------------------------------------  -->
+<!--    MENU - Navigation Bar                                -->
+<!-- ------------------------------------------------------  -->
+
+<div class="navbar">
+  <a href="cleanjud_home.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="cleanjud_sobre.html"><i class="fa fa-fw fa-user"></i> Sobre</a>
+  <a href="cleanjud_gestao_metadado.html"><i class="fa fa-fw fa-legal"></i> Gestão</a>
+  <a href="cleanjud_mapa.html"><i class="fa fa-fw fa-globe"></i> Mapa</a>
+  <a href="cleanjud_correcao_automatica.html"><i class="fa fa-fw fa-check"></i> Correção Automática</a> 
+  <a href="cleanjud_correcao_manual.html"><i class="fa fa-fw fa-copy"></i> Correção Manual</a> 
+  <a class="active"  href="cleanjud_controle.html"><i class="fa fa-fw fa-dashboard"></i> Controle</a>
+  <a href="cleanjud_xml.html"><i class="fa fa-fw fa-save"></i> XML Valid</a> 
+  <a href="cleanjud_docs.html"><i class="fa fa-fw fa-question-circle"></i> DOC</a> 
+</div>
+
+
+<br>
+<!-- ------------------------------------------------------  -->
+<!--    Tabela com Macro Indicadores KPI e Filtros ComboBox  -->
+<!-- ------------------------------------------------------  -->
+
+<div>
+<table class="table_kpi">
+<tr>
+<td class="td_espaco"></td>
+<td class="td_kpi1"><div id="kpi1">0</div></td>
+<td class="td_kpi3"><div id="kpi3">0</div></td>
+<td class="td_kpi6"><div id="kpi6">0</div></td>
+<td class="td_kpi5"><div id="kpi5">0</div></td>
+
+<td class="td_espaco"></td>
+
+
+<!-- ------------------------------------------------------  -->
+<!--   ComboBox com os Tipos de Justica                      -->
+<!-- ------------------------------------------------------  -->
+
+<td  class="td_combo2">
+
+Ramo da Justiça:<br>
+<div class="pure-css-select-style theme-default">
+  <select  id="combo_justica" onchange="jsGraph();">
+     <option value="todos">(todos)</option>
+     <option value="STF">Supremo Tribunal Federal</option>
+     <option value="CNJ">Conselho Nacional de Justiça</option>
+     <option value="STJ">Superior Tribunal de Justiça</option>
+     <option value="TRF">Justiça Federal</option>
+     <option value="TRT">Justiça do Trabalho</option>
+     <option value="TRE">Justiça Eleitoral</option>
+     <option value="STM">Justiça Militar da União</option>
+     <option value="TJ" >Justiça Estadual</option>
+     <option value="TJM">Justiça Militar Estadual</option>
+  </select>
+</div>
+</td>
+
+</tr>
+</table>
+
+</div>
+
+
+
+<!-- ------------------------------------------------------  -->
+<!--   REPORT                                                -->
+<!-- ------------------------------------------------------  -->
+
+<br><br>
+
+
+
+<!-- ------------------------------------------------------  -->
+<!--   Insere dinamicamente o trecho de codigo HTML          -->
+<!--    gerado pelo backend em Python ...                    -->
+<!-- ------------------------------------------------------  -->
+
+
+<div id="includedContent"></div>
+
+
+<!-- ------------------------------------------------------  -->
+
+
+
+
+<script type="text/javascript">
+    jsKPI();
+</script>
+
+
+
+<br><br>
+
+<!-- ------------------------------------------------------  -->
+<!--   Final do HTML                                         -->
+<!-- ------------------------------------------------------  -->
+	
+</body>
+</html> 

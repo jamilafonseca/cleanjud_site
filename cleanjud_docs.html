@@ -1,0 +1,294 @@
+<!-- ---------------------------------------------------------------------------- -->
+<!--  CNJ Inova -  HACKATHON - Desafio 2 - #Saneamento de Dados                   -->
+<!-- ---------------------------------------------------------------------------- -->
+<!--  SOLUCAO:  CleaNJud - Decisoes mais Eficazes com a Qualidade do DATAJUD      -->
+<!-- ---------------------------------------------------------------------------- -->
+<!--  Purpose:  www.cleanjud.com.br                                               -->
+<!-- ---------------------------------------------------------------------------- -->
+<!--  AUTORES:  (GRUPO 11 - desafio 2)                                            -->
+<!--                                                                              -->
+<!--            Jamila Fonseca - ADV - (jamila.fonseca@hotmail.com)               -->
+<!--                             www.linkedin.com/in/jamila-fonseca-41b07a19a     -->
+<!--            Luis Assuncao  - TI  - (lcpassuncao@gmail.com)                    -->
+<!--            Luciana Weiler - UX  - (luciana.weiler.2020@gmail.com)            -->
+<!-- ---------------------------------------------------------------------------- -->
+<!-- VERSAO:    Novembro - 2020                                                   -->
+<!-- ---------------------------------------------------------------------------- -->
+
+<html>
+<head>
+
+<!-- ------------------------------------------------------  -->
+<!--    Metadados                                            -->
+<!-- ------------------------------------------------------  -->
+
+<meta NAME="title" CONTENT="CleaNJud">
+<meta NAME="keywords" CONTENT="CLEANJUD,CNJ,CNJinova,saneamento,datajud,higienizacao,machine learning,inteligencia artificial">
+<meta NAME="description" CONTENT="CLEANJUD - Gestão de Metadados e Saneamento do DATAJUD">
+<meta NAME="author" CONTENT="Jamila Fonseca, Luis Assuncao, Luciana Weiler">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>CLEANJUD - Saneamento do DATAJUD</title>
+
+<!-- ------------------------------------------------------  -->
+<!--   CSS - STYLES SHEETS                                   -->
+<!-- ------------------------------------------------------  -->
+
+<link rel="stylesheet" href="css/cleanjud_menu.css">
+<!-- CSS do COMBO BOX -->
+<link rel="stylesheet" href="css/pure-css-select-style.css">
+<!-- CSS do MENU foi utilizado biblioteca externa -->
+<link rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="css/w3.css">
+
+<!-- ------------------------------------------------------  -->
+<!--   JS - JAVASCRIPTS                                      -->
+<!-- ------------------------------------------------------  -->
+	
+</head>
+
+<body>
+
+<!-- ------------------------------------------------------  -->
+<!--    Cabecalho e Logomarcas - CLEANJUD                    -->
+<!-- ------------------------------------------------------  -->
+
+<div class="navbar_fixed">
+
+<div class="titulo">
+<img src="images/cleanjud_header.jpg">
+</div>
+
+<!-- ------------------------------------------------------  -->
+<!--    MENU - Navigation Bar                                -->
+<!-- ------------------------------------------------------  -->
+
+
+  <a href="cleanjud_home.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="cleanjud_sobre.html"><i class="fa fa-fw fa-user"></i> Sobre</a>
+  <a href="cleanjud_gestao_metadado.html"><i class="fa fa-fw fa-legal"></i> Gestão</a>
+  <a href="cleanjud_mapa.html"><i class="fa fa-fw fa-globe"></i> Mapa</a>
+  <a href="cleanjud_correcao_automatica.html"><i class="fa fa-fw fa-check"></i> Correção Automática</a> 
+  <a href="cleanjud_correcao_manual.html"><i class="fa fa-fw fa-copy"></i> Correção Manual</a> 
+  <a href="cleanjud_controle.html"><i class="fa fa-fw fa-dashboard"></i> Controle</a>
+  <a href="cleanjud_xml.html"><i class="fa fa-fw fa-save"></i> XML Valid</a> 
+  <a class="active" href="cleanjud_docs.html"><i class="fa fa-fw fa-question-circle"></i> DOC</a> 
+</div>
+
+<!-- ------------------------------------------------------  -->
+<!--    Corpo da Pagina                                      -->
+<!-- ------------------------------------------------------  -->
+
+
+<br>
+
+<!-- Menu Lateral -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:20%">
+  <h3 class="w3-bar-item">Documentação:</h3>
+  <a href="#C01" class="w3-bar-item w3-button">01) Instruções de Uso</a>
+  <a href="#C02" class="w3-bar-item w3-button">02) Arquitetura Conceitual</a>
+  <a href="#C03" class="w3-bar-item w3-button">03) Arquitetura do Sistema</a>
+  <a href="#C04" class="w3-bar-item w3-button">04) Fluxo de Dados</a>
+  <a href="#C05" class="w3-bar-item w3-button">05) Tecnologias e Licenças</a>
+  <a href="#C06" class="w3-bar-item w3-button">06) Regras e Métricas</a>
+  <a href="#C07" class="w3-bar-item w3-button">07) Escalabilidade</a>
+  <a href="#C08" class="w3-bar-item w3-button">08) Diferenciais</a>
+  
+</div>
+
+<!-- Page Content -->
+<div id="C01"  style="margin-left:21%;padding-top:125px;">
+
+<br><br>
+<div class="w3-container w3-teal">
+  <h1>01) Instruções de Uso</h1>
+</div>
+
+<br><br>
+<img src="images/doc_instrucoes.jpg" width="900px">
+<br><br>
+<br>
+
+<div id="C02"</div>
+<br><br><br><br>
+<div class="w3-container w3-teal">
+  <h1>02) Arquitetura Conceitual</h1>
+</div>
+<br><br>
+Temos como Proposta ser uma Solução <b>COMPLETA e EFICIENTE</b>, <br>
+atuando na resolução dos problemas em todo ciclo da informação:<br>
+<br><br>
+<img src="images/doc_conceito.jpg" width="900px">
+<br><br>
+<br><br>
+<u>Ação Pró-Ativa:</u>  Identificar e já solucionar as inconsistências automaticamente nos tribunais, <br>
+ANTES dos dados serem enviados ao CNJ, evitando a entrada de novas inconsistências;<br>
+<br>
+<u>Melhoria Contínua:</u>  Identificar e corrigir de forma automática as inconsistências dos metadados <br>
+em relação ao histórico de processos que já estão no DATAJUD;<br>
+<br>
+<u>Ação de Controle:</u>  Identificar, separar e fazer download das inconsistências <br>
+que precisam ser corrigidas manualmente, e depois e controlar o reenvio e correções,<br>
+ num fluxo de controle automatizado.<br>
+ <br>
+<div id="C03"</div>
+TUDO dentro de um site ágil, intuitivo e “CLEAN”, muito fácil de ser utilizado! <br>
+<br>
+<br>
+<br>
+<div class="w3-container w3-teal">
+  <h1>03) Arquitetura do Sistema</h1>
+</div>
+
+<br><br>
+<img src="images/doc_arquitetura.jpg" width="900px">
+<br><br>
+<br>
+
+<div id="C04"</div>
+<br><br><br><br>
+<div class="w3-container w3-teal">
+  <h1>04) Fluxo de Dados</h1>
+</div>
+
+<br><br>
+<img src="images/doc_fluxo_dados.jpg" width="900px">
+<br><br>
+<br>
+
+<div id="C05"</div>
+<br><br><br><br>
+<div class="w3-container w3-teal">
+  <h1>05) Tecnologias e Licenças</h1>
+</div>
+<br>
+<br>
+<b>Front-End (site: www.cleanjud.com.br)</b><br>
+<br>
+<table>
+<tr >
+<td width="150px">HTML5</td><td>Para construção das páginas</td>
+</tr>
+<tr>
+<td>JAVASCRIPT</td><td>Função para o dinamismo do site e armazenamento em memória do array de dados</td>
+</tr>
+<tr>
+<td>CSS</td><td>Cascade Style Sheets - Configuração de Estilos e Cores</td>
+</tr>
+<tr>
+<td>GEO JSON</td><td>Para mapeamento dos contornos dos municípios (polígonos)</td>
+</tr>
+<tr>
+<td>API Leaflet</td><td>Open-Source para Mapa Georeferenciado <a href="https://leafletjs.com/">(leafletjs.com)</a></td>
+</tr>
+</table>
+<br>
+<br>
+<b>Back-End (python)</b><br>
+<br>
+<table>
+<tr>
+<td width="150px">Python</td><td>Linguagem de programação Open-Source (versão 3.6)</td>
+</tr>
+<tr>
+<td>Pandas</td><td>Biblioteca Open-source de Data Frame - Python</td>
+</tr>
+<tr>
+<td>openpyxl</td><td>Biblioteca Open-source para manipular Excel <a href="https://pypi.org/project/openpyxl/">OpenPyXL</a></td></td>
+</tr>
+</table>
+<br>
+
+<div id="C06"</div>
+<br><br><br><br>
+<div class="w3-container w3-teal">
+  <h1>06) Regras e Métricas</h1>
+</div>
+<br><br>
+O algoritmo de identificação de erros, anomalias e inconsistências<br>
+ aplica em toda a base de dados, diversas regras de validação, conforme descritas abaixo:
+
+<br><br>
+<img src="images/doc_regras.jpg" width="900px">
+<br><br>
+<br>
+O algoritmo inteligente de Correção Automática, utiliza mais de 10 Bases de Conhecimento, <br>
+com informações tratadas e padronizadas.<br>
+<br>
+Utiliza também o Conhecimento Jurídico nos algoritmos, <br>
+como p.ex, a resolução do CNJ num. 65/2008,<br>
+que define a composição do Número do Processo<br>
+permitindo a recomposição de algumas infomações de localidade e <br>
+Órgão Julgador a partir de parte do Número do Processo.<br>
+<br>
+É o Saber Jurídico somado ao Saber Tecnológico.<br>
+<br>
+Outras regras de correção automática, <br>
+utilizadas nos processos de tratamento da base histórica do DATAJUD e<br>
+ também no XML Valid (antes do envio do arquivo ao DATAJUD), <br>
+ estão descritas abaixo:
+
+<br><br>
+<img src="images/doc_recuperacao.jpg" width="900px">
+<br><br>
+<br>
+
+<div id="C07"</div>
+<br><br><br><br>
+<div class="w3-container w3-teal">
+  <h1>07) Escalabilidade</h1>
+</div>
+
+<br> <br>
+Para esse desafio forma utilizados toda a amostra de 3 milhões de registros, enviado pelo CNJ.<br>
+O processamento foi realizado em uma máquina local (Notebook Intel i7 com 8GB de memória).<br><br>
+Os tempos de processamento totais ficaram próximo a 1 milhão de registros POR HORA.<br><br>
+Como sugestão de execução em produção, considerando o cenário de processamento <br>
+da base histórica de 200 milhões de registros do DATAJUD, pode ser<br>
+utilizado a técnica de PARALELISMO, isto é,  dividir a base de entrada<br>
+em lotes de processamento (p.ex, dividir por cada Tribunal)<br>
+e executar cada lote em máquinas separadas (VMs),  <br>
+ou em um Servidor que suporte Multi-Threads (com muitos processadores - CPUs).<br>
+<br>
+
+<br>
+
+<div id="C08"</div>
+<br><br><br><br>
+<div class="w3-container w3-teal">
+  <h1>08) Diferenciais</h1>
+</div>
+
+<br>
+Não adianta fazer a identificação das inconsistências nos dados <br>
+e devolver a sujeira de volta aos tribunais, <br>
+pois teríamos um número muito alto de informações a  serem corrigidas. <br>
+<br>
+Portanto, nossa solução tem como principal diferencial, <br> 
+o Modelo de correção automática de informações.<br>
+<br>
+Com a nossa solução na versão de hoje, feita com as informações que foram disponibilizadas para o desafio,<br>
+ já corrigimos de forma automática 8 informações das 22 disponibilizadas, <br>
+ com o potencial de ampliar a correção com a utilização de novas regras e/ou<br>
+ um escopo maior de informações disponíveis.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+</div>
+
+</div>
+
+<!-- ------------------------------------------------------  -->
+<!--   Final do HTML                                         -->
+<!-- ------------------------------------------------------  -->
+	
+</body>
+</html> 

@@ -1,0 +1,321 @@
+<!-- ---------------------------------------------------------------------------- -->
+<!--  CNJ Inova -  HACKATHON - Desafio 2 - #Saneamento de Dados                   -->
+<!-- ---------------------------------------------------------------------------- -->
+<!--  SOLUCAO:  CleaNJud - Decisoes mais Eficazes com a Qualidade do DATAJUD      -->
+<!-- ---------------------------------------------------------------------------- -->
+<!--  Purpose:  www.cleanjud.com.br                                               -->
+<!-- ---------------------------------------------------------------------------- -->
+<!--  AUTORES:  (GRUPO 11 - desafio 2)                                            -->
+<!--                                                                              -->
+<!--            Jamila Fonseca - ADV - (jamila.fonseca@hotmail.com)               -->
+<!--                             www.linkedin.com/in/jamila-fonseca-41b07a19a     -->
+<!--            Luis Assuncao  - TI  - (lcpassuncao@gmail.com)                    -->
+<!--            Luciana Weiler - UX  - (luciana.weiler.2020@gmail.com)            -->
+<!-- ---------------------------------------------------------------------------- -->
+<!-- VERSAO:    Novembro - 2020                                                   -->
+<!-- ---------------------------------------------------------------------------- -->
+
+<html>
+<head>
+
+<!-- ------------------------------------------------------  -->
+<!--    Metadados                                            -->
+<!-- ------------------------------------------------------  -->
+
+<meta NAME="title" CONTENT="CleaNJud">
+<meta NAME="keywords" CONTENT="CLEANJUD,CNJ,CNJinova,saneamento,datajud,higienizacao,machine learning,inteligencia artificial">
+<meta NAME="description" CONTENT="CLEANJUD - Gestão de Metadados e Saneamento do DATAJUD">
+<meta NAME="author" CONTENT="Jamila Fonseca, Luis Assuncao, Luciana Weiler">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>CLEANJUD - Saneamento do DATAJUD</title>
+
+<!-- ------------------------------------------------------  -->
+<!--   CSS - STYLES SHEETS                                   -->
+<!-- ------------------------------------------------------  -->
+
+<link rel="stylesheet" href="css/cleanjud_menu.css">
+<link rel="stylesheet" href="css/cleanjud_kpi.css">
+<!-- CSS do COMBO BOX -->
+<link rel="stylesheet" href="css/pure-css-select-style.css">
+<!-- CSS do MENU foi utilizado biblioteca externa -->
+<link rel="stylesheet" href="css/font-awesome.css">
+<!-- CSS do MAPA leafletj.com  OpenSource  -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+<link rel="stylesheet" href="css/cleanjud_mapa.css">
+
+
+<!-- ------------------------------------------------------  -->
+<!--   JS - JAVASCRIPTS                                      -->
+<!-- ------------------------------------------------------  -->
+
+<!-- Javascript do MAPA leafletj.com  OpenSource  -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+<script src="js/cleanjud_tribunais.js"></script>
+<script src="ftp/cleanjud_gestao_array_kpi.js"></script>
+
+
+<script type="text/JavaScript">
+
+function jsGraph() {	
+
+
+	document.getElementById("kpi1").innerHTML = arrayDadosKPI['TRE'][0];
+	document.getElementById("kpi2").innerHTML = arrayDadosKPI['TRE'][1];
+	document.getElementById("kpi3").innerHTML = arrayDadosKPI['TRE'][2];
+	document.getElementById("kpi4").innerHTML = arrayDadosKPI['TRE'][3];
+	
+}
+	
+</script>
+
+<!-- ------------------------------------------------------  -->
+
+</head>
+
+<body>
+
+<!-- ------------------------------------------------------  -->
+<!--    Cabecalho e Logomarcas - CLEANJUD                    -->
+<!-- ------------------------------------------------------  -->
+
+<div class="titulo">
+<img src="images/cleanjud_header.jpg">
+</div>
+
+<!-- ------------------------------------------------------  -->
+<!--    MENU - Navigation Bar                                -->
+<!-- ------------------------------------------------------  -->
+
+<div class="navbar">
+  <a href="cleanjud_home.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="cleanjud_sobre.html"><i class="fa fa-fw fa-user"></i> Sobre</a>
+  <a href="cleanjud_gestao_metadado.html"><i class="fa fa-fw fa-legal"></i> Gestão</a>
+  <a class="active"  href="cleanjud_mapa.html"><i class="fa fa-fw fa-globe"></i> Mapa</a>
+  <a href="cleanjud_correcao_automatica.html"><i class="fa fa-fw fa-check"></i> Correção Automática</a> 
+  <a href="cleanjud_correcao_manual.html"><i class="fa fa-fw fa-copy"></i> Correção Manual</a> 
+  <a href="cleanjud_controle.html"><i class="fa fa-fw fa-dashboard"></i> Controle</a>
+  <a href="cleanjud_xml.html"><i class="fa fa-fw fa-save"></i> XML Valid</a> 
+  <a href="cleanjud_docs.html"><i class="fa fa-fw fa-question-circle"></i> DOC</a> 
+</div>
+
+<!-- ------------------------------------------------------  -->
+<!--    Corpo da Pagina                                      -->
+<!-- ------------------------------------------------------  -->
+
+<br>
+
+<!-- ------------------------------------------------------  -->
+<!--    Tabela com Macro Indicadores KPI e Filtros ComboBox  -->
+<!-- ------------------------------------------------------  -->
+
+<div>
+<table class="table_kpi">
+<tr>
+<td class="td_espaco"></td>
+<td class="td_kpi1"><div id="kpi1">0</div></td>
+<td class="td_kpi2"><div id="kpi2">0</div></td>
+<td class="td_kpi3"><div id="kpi3">0</div></td>
+<td class="td_kpi4"><div id="kpi4">0%</div></td>
+<td class="td_espaco"></td>
+
+
+<!-- ------------------------------------------------------  -->
+<!--   ComboBox com os Tipos de Justica                      -->
+<!-- ------------------------------------------------------  -->
+
+<td  class="td_combo2">
+
+Ramo da Justiça:<br>
+<div class="pure-css-select-style theme-default">
+  <select  id="combo_justica" onchange="location = this.options[this.selectedIndex].value;">
+     <option value="cleanjud_mapa_trt.html">Justiça do Trabalho</option>
+     <option value="cleanjud_mapa_tre.html" selected>Justiça Eleitoral</option>
+     <option value="cleanjud_mapa_tj.html" >Justiça Estadual</option>
+     <option value="cleanjud_mapa_tjm.html">Justiça Militar Estadual</option>
+  </select>
+</div>
+</td>
+
+</tr>
+</table>
+
+</div>
+
+<script type="text/javascript">
+    jsGraph();
+</script>
+
+<!-- ------------------------------------------------------  -->
+<!--  MAPA                                                   -->
+<!-- ------------------------------------------------------  -->
+
+<br>
+
+<div id='map'></div>
+
+<!-- -------------------------------------- -->
+<!-- Carrega arquivo com os dados do Mapa e -->
+<!-- e os poligonos dos Municipios          -->
+<!-- arquivo formato  GeoJSON               -->
+<!-- -------------------------------------- -->
+
+<script type="text/javascript" src="ftp/cleanjud_geo_tre.js"></script>
+
+
+<!-- -------------------------------------- -->
+<!-- Configura e Carrega os Objetos do Mapa -->
+<!-- Legendas e Layers                      -->
+<!-- -------------------------------------- -->
+
+
+
+<script type="text/javascript">
+
+    // Configuracao dos FUNDOS do Mapa
+	var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+		
+
+	var grayscale  = L.tileLayer(mbUrl, {id: 'mapbox/light-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr}),
+		streets    = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mbAttr});
+
+
+	// Configuracao Inicial do Mapa, Lat/LONG central, Zoom e Layouts
+	var map = L.map('map', {
+		center: [-11.22, -62.80],
+		zoom: 4,
+		layers: [streets, grayscale]
+	});
+
+
+    // Configuracao do Botao de Troca do Layout de Fundo - Background Map
+	var baseLayers = {
+	    "Fundo Mapa cinza": grayscale,
+		"Mapa com as ruas": streets
+	};
+	
+	L.control.layers(baseLayers).addTo(map);
+	
+	
+	// Controle para ativar a LEGENDA com as informacoes dos Municipios
+	var info = L.control();
+
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		this.update();
+		return this._div;
+	};
+
+
+	info.update = function (props) {
+		this._div.innerHTML = '<h3>CleaNJud</h3><h4>Mapa com % Inconsistências</h4>' +  (props ?
+			 props.info : 'Passe o mouse nos municípios...');
+	};
+
+	info.addTo(map);
+
+
+	// Calcula a tonalidade da COR dependendo do Valor do Percentual de Inconsistencia
+	function getColor(d) {
+		return  d > 60 ? '#800026' :
+				d > 45 ? '#BD0026' :
+				d > 35 ? '#E31A1C' :
+				d > 25 ? '#FC4E2A' :
+				d > 15 ? '#FD8D3C' :
+				d > 7  ? '#FEB24C' :
+				d > 2  ? '#FED976' :
+						 '#4CFF00';
+	}
+
+	function style(feature) {
+		return {
+			weight: 1,
+			opacity: 1,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor(feature.properties.pct_inconsistencias)
+		};
+	}
+
+	function highlightFeature(e) {
+		var layer = e.target;
+
+		layer.setStyle({
+			weight: 5,
+			color: '#666',
+			dashArray: '',
+			fillOpacity: 0.7
+		});
+
+		if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+			layer.bringToFront();
+		}
+
+		info.update(layer.feature.properties);
+	}
+
+	var geojson;
+
+	function resetHighlight(e) {
+		geojson.resetStyle(e.target);
+		info.update();
+	}
+
+	function zoomToFeature(e) {
+		map.fitBounds(e.target.getBounds());
+	}
+
+	function onEachFeature(feature, layer) {
+		layer.on({
+			mouseover: highlightFeature,
+			mouseout: resetHighlight,
+			click: zoomToFeature
+		});
+	}
+
+	geojson = L.geoJson(statesData, {
+		style: style,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+	// conficuracao da legenda de cores
+    var legend = L.control({position: 'bottomright'});
+
+	legend.onAdd = function (map) {
+
+		var div = L.DomUtil.create('div', 'info legend'),
+			grades = [0, 2, 7, 15, 25, 35, 45, 60],
+			labels = [],
+			from, to;
+
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+			labels.push(
+				'<i style="background:' + getColor(from + 1) + '"></i> ' +
+				from + (to ? '&ndash;' + to + '%' : '%+'));
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend.addTo(map);
+
+</script>
+
+
+
+<!-- ------------------------------------------------------  -->
+<!--   Final do HTML                                         -->
+<!-- ------------------------------------------------------  -->
+	
+</body>
+</html> 
