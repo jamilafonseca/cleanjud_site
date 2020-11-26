@@ -1,0 +1,219 @@
+/* ---------------------------------------------------------------------------- */
+/*  CNJ Inova -  HACKATHON - Desafio 2 - #Saneamento de Dados                   */
+/* ---------------------------------------------------------------------------- */
+/*  SOLUCAO:  CleaNJud - Decisoes mais Eficazes com a Qualidade do DATAJUD      */
+/* ---------------------------------------------------------------------------- */
+/*  Purpose:  www.cleanjud.com.br                                               */
+/*  arquivo CSS - Style Sheet                                                   */
+/* ---------------------------------------------------------------------------- */
+/*  AUTORES:  (GRUPO 11 - desafio 2)                                            */
+/*                                                                              */
+/*            Jamila Fonseca - ADV - (jamila.fonseca@hotmail.com)               */
+/*                             www.linkedin.com/in/jamila-fonseca-41b07a19a     */
+/*            Luis Assuncao  - TI  - (lcpassuncao@gmail.com)                    */
+/*            Luciana Weiler - UX  - (luciana.weiler.2020@gmail.com)            */
+/* ---------------------------------------------------------------------------- */
+/* VERSAO:    Novembro - 2020                                                   */
+/* ---------------------------------------------------------------------------- */
+
+
+.table_report {
+  border: 1;
+  text-align: center; 
+  vertical-align: middle;
+}
+
+.td_rpt_label { 
+  font-family: Arial; 
+  font-style: bold;
+  font-size: 9pt;
+  color: black;
+  text-align: left; 
+  vertical-align: middle;
+  width:220px;
+  height:20px;
+  border-top: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.td_rpt_label_ranking { 
+  font-family: Arial; 
+  font-style: bold;
+  font-size: 9pt;
+  color: black;
+  text-align: left; 
+  vertical-align: middle;
+  width:300px;
+  height:25px;
+  border-top: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.td_rpt_button { 
+  font-family: Arial; 
+  font-style: bold;
+  font-size: 9pt;
+  background-color: #EEEEEE;
+  color: black;
+  text-align: center; 
+  vertical-align: middle;
+  width:80px;
+  height:25px;
+  border-top: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+
+.td_rpt_label:hover { 
+  background-color:  #CCFFFF;
+}
+
+.td_rpt_value { 
+  font-family: Courier; 
+  font-size: 9pt;
+  color: black;
+  text-align: right; 
+  vertical-align: middle;
+  width:80px;
+  height:20px;
+  border-top: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.td_rpt_graph { 
+  background-image: url(../images/graph_background.png); 
+  text-align: left; 
+  vertical-align: middle;
+  width:100px;
+  height:20px;
+  border-top: 1px solid #CCCCCC;
+
+}
+
+.td_rpt_ranking { 
+  background-image: url(../images/graph_background2.png); 
+  text-align: left; 
+  vertical-align: middle;
+  width:300px;
+  height:25px;
+  border-top: 1px solid #CCCCCC;
+
+}
+
+.td_rpt_header { 
+  background-image: url(../images/header_background.png); 
+  font-family: Arial; 
+  font-style: bold;
+  font-size: 9px;
+  color: black;
+  text-align: CENTER; 
+  vertical-align: middle;
+  width:180px;
+  height:40px;
+  border-right: 0px #FFFFFF;
+  border-left:  0px #FFFFFF;
+}
+
+.td_rpt_header_ranking { 
+  font-family: Arial; 
+  font-style: bold;
+  font-size: 12px;
+  color: black;
+  text-align: CENTER; 
+  vertical-align: middle;
+  width:300px;
+  height:40px;
+  border-right: 0px #FFFFFF;
+  border-left:  0px #FFFFFF;
+  border-top: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.td_rpt_space { 
+  width:30px;
+  height:20px;
+  border-top: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.img_report {
+   display: inline-block;
+}
+.img_report img:hover {
+    opacity: .5;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  font-family: Arial; 
+  font-size: 12px;
+  visibility: hidden;
+  width: 300px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip .tooltipvalue {
+  font-family: Arial; 
+  font-size: 12px;
+  visibility: hidden;
+  width: 60px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltipvalue::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltipvalue {
+  visibility: visible;
+  opacity: 1;
+}

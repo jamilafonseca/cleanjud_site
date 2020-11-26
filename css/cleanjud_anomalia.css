@@ -1,0 +1,117 @@
+/* ---------------------------------------------------------------------------- */
+/*  CNJ Inova -  HACKATHON - Desafio 2 - #Saneamento de Dados                   */
+/* ---------------------------------------------------------------------------- */
+/*  SOLUCAO:  CleaNJud - Decisoes mais Eficazes com a Qualidade do DATAJUD      */
+/* ---------------------------------------------------------------------------- */
+/*  Purpose:  www.cleanjud.com.br                                               */
+/*  arquivo CSS - Style Sheet                                                   */
+/* ---------------------------------------------------------------------------- */
+/*  AUTORES:  (GRUPO 11 - desafio 2)                                            */
+/*                                                                              */
+/*            Jamila Fonseca - ADV - (jamila.fonseca@hotmail.com)               */
+/*                             www.linkedin.com/in/jamila-fonseca-41b07a19a     */
+/*            Luis Assuncao  - TI  - (lcpassuncao@gmail.com)                    */
+/*            Luciana Weiler - UX  - (luciana.weiler.2020@gmail.com)            */
+/* ---------------------------------------------------------------------------- */
+/* VERSAO:    Novembro - 2020                                                   */
+/* ---------------------------------------------------------------------------- */
+
+
+
+tbody {
+  display: block; /* to enable vertical scrolling */
+  max-height: 350px; /* e.g. */
+  overflow-y: scroll; /* keeps the scrollbar even if it doesn't need it; display purpose */
+  
+}
+
+thead {
+  display: table; /* to take the same width as tr */
+}
+
+th
+ {
+     background-color: #CCCCCC;
+     color: black;
+     text-align: center;
+     vertical-align: bottom;
+     height: 210px;
+     padding-bottom: 3px;
+     padding-left: 5px;
+     padding-right: 5px;
+	 
+ }
+
+td
+ {
+     font-family: Arial;
+	 font-size: 10px;
+     color: white;
+     text-align: center;
+     vertical-align: middle;
+	 height: 20px;
+     width: 20px;
+ }
+
+.td_linha
+ {
+     background-color: #CCCCCC;
+     color: black;
+ 	 font-family: Arial;
+	 font-size: 10px;
+	 width: 210px;
+     text-align: right;
+     vertical-align: middle;
+}
+
+.td_header
+{
+     background-image: url(../images/anomalia_header.png);
+	 width: 210px;
+	 height: 210px;
+	 padding-bottom: 0px;
+     padding-left: 0px;
+     padding-right: 0px;
+}
+
+.verticalText
+{
+     font-family: Arial;
+ 	 font-size: 9px;
+	 color: black;
+	 text-align: center;
+     vertical-align: middle;
+     width: 10px;
+     margin: 0px;
+     padding: 0px;
+     padding-left: 1px;
+     padding-right: 1px;
+     padding-top: 1px;
+     white-space: nowrap;
+     -webkit-transform: rotate(-90deg); 
+                -moz-transform: rotate(-90deg);                 
+ }
+			
+			
+			
+				
+.td00 {background-color: #FFFFFF;  }
+                                   
+.td01 {background-color: #EEEEEE;  }
+                                   
+.td02 {background-color: #EEEEFE;  }
+                                   
+.td03 {background-color: #DDDDEE;  }
+                                   
+.td04 {background-color: #EE0000;  }
+                                   
+.td05 {background-color: #DD0000;  }
+                                   
+.td06 {background-color: #CC0000;  }
+                                   
+.td07 {background-color: #BB0000;  }
+                                  
+.td08 {background-color: #AA0000; }
+
+			
+			

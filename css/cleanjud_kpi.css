@@ -1,0 +1,94 @@
+/* ---------------------------------------------------------------------------- */
+/*  CNJ Inova -  HACKATHON - Desafio 2 - #Saneamento de Dados                   */
+/* ---------------------------------------------------------------------------- */
+/*  SOLUCAO:  CleaNJud - Decisoes mais Eficazes com a Qualidade do DATAJUD      */
+/* ---------------------------------------------------------------------------- */
+/*  Purpose:  www.cleanjud.com.br                                               */
+/*  arquivo CSS - Style Sheet                                                   */
+/* ---------------------------------------------------------------------------- */
+/*  AUTORES:  (GRUPO 11 - desafio 2)                                            */
+/*                                                                              */
+/*            Jamila Fonseca - ADV - (jamila.fonseca@hotmail.com)               */
+/*                             www.linkedin.com/in/jamila-fonseca-41b07a19a     */
+/*            Luis Assuncao  - TI  - (lcpassuncao@gmail.com)                    */
+/*            Luciana Weiler - UX  - (luciana.weiler.2020@gmail.com)            */
+/* ---------------------------------------------------------------------------- */
+/* VERSAO:    Novembro - 2020                                                   */
+/* ---------------------------------------------------------------------------- */
+
+
+.table_kpi {
+  font-family: Arial; 
+  font-size: 18pt;
+  border: 0;
+  text-align: center; 
+  vertical-align: middle;
+}
+  
+.td_kpi1 { 
+  background-image: url(../images/td_cell_kpi_1.png); 
+  width:162px;
+  height:79px;
+}
+
+.td_kpi2 { 
+  background-image: url(../images/td_cell_kpi_2.png); 
+  width:202px;
+  height:79px;
+}
+
+.td_kpi3 { 
+  background-image: url(../images/td_cell_kpi_3.png); 
+  width:168px;
+  height:79px;
+}
+
+.td_kpi4 { 
+  background-image: url(../images/td_cell_kpi_4.png); 
+  width:133px;
+  height:79px;
+}
+
+.td_kpi5 { 
+  background-image: url(../images/td_cell_kpi_5.png); 
+  width:163px;
+  height:79px;
+}
+
+.td_kpi6 { 
+  background-image: url(../images/td_cell_kpi_6.png); 
+  width:163px;
+  height:79px;
+}
+
+.td_kpi7 { 
+  background-image: url(../images/td_cell_kpi_7.png); 
+  width:170px;
+  height:79px;
+}
+
+
+.td_combo1 { 
+  font-family: Arial; 
+  font-size: 12pt;
+  color: green;
+  text-align: left; 
+  vertical-align: bottom;
+  width:150px;
+  height:79px;
+}
+
+.td_combo2 { 
+  font-family: Arial; 
+  font-size: 12pt;
+  color: green;
+  text-align: left; 
+  vertical-align: bottom;
+  width:300px;
+  height:79px;
+}
+
+.td_espaco { 
+  width:20px;
+  height:79px;
+}

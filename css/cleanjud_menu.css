@@ -1,0 +1,81 @@
+/* ---------------------------------------------------------------------------- */
+/*  CNJ Inova -  HACKATHON - Desafio 2 - #Saneamento de Dados                   */
+/* ---------------------------------------------------------------------------- */
+/*  SOLUCAO:  CleaNJud - Decisoes mais Eficazes com a Qualidade do DATAJUD      */
+/* ---------------------------------------------------------------------------- */
+/*  Purpose:  www.cleanjud.com.br                                               */
+/*  arquivo CSS - Style Sheet                                                   */
+/* ---------------------------------------------------------------------------- */
+/*  AUTORES:  (GRUPO 11 - desafio 2)                                            */
+/*                                                                              */
+/*            Jamila Fonseca - ADV - (jamila.fonseca@hotmail.com)               */
+/*                             www.linkedin.com/in/jamila-fonseca-41b07a19a     */
+/*            Luis Assuncao  - TI  - (lcpassuncao@gmail.com)                    */
+/*            Luciana Weiler - UX  - (luciana.weiler.2020@gmail.com)            */
+/* ---------------------------------------------------------------------------- */
+/* VERSAO:    Novembro - 2020                                                   */
+/* ---------------------------------------------------------------------------- */
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#map {
+  height: 100%;
+}
+
+
+.titulo {
+  background-color: #0A243B;
+}
+
+.navbar_fixed {
+  width: 100%;
+  background-color: #009D94;
+  overflow: hidden;
+  position: fixed; 
+  top: 0; 
+}
+
+.navbar_fixed a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar_fixed a:hover {
+  background-color: #00776F;
+  color: white;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #009D94;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #00776F;
+  color: white;
+}
+
+.active {
+  background-color: #0A243B;
+  color: black;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
